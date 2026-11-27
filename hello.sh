@@ -1,11 +1,9 @@
-if [ $# == 1 ] 
+if [ "$#" -eq 1 ]
 
-then 
+then
+    echo "hi $1"
 
-        echo hi $1 
-
-else 
-
-        echo need name as param 
+else
+    echo "need name as param"
 
 fi
