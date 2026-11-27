@@ -24,7 +24,7 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Install HTML Validator
-        run: npm install -g html-validate
+        run: npm install --global html-validate
 
       - name: Validate HTML
         run: html-validate index.html
@@ -32,10 +32,10 @@ jobs:
       - name: Upload Website
         uses: actions/upload-pages-artifact@v3
         with:
-          path: '.'
+          path: './'
 
   deploy:
-    name: CD - Deploy to GitHub Pages
+    name: CD - Deploy Website
     needs: build
     if: github.event_name == 'push'
     runs-on: ubuntu-latest
