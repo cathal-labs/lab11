@@ -6,6 +6,6 @@ then
     echo "hi $1"
 
 else
-    echo "need name as param"
+    echo "hello name as param"
 
 fi
